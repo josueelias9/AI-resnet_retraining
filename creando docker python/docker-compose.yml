@@ -1,0 +1,10 @@
+
+version: "3.7"
+
+services:
+  app:
+    image: django-image
+    build: .
+    container_name: django-container
+    ports:
+      - 8000:8000
