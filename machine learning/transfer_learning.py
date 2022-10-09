@@ -1,9 +1,10 @@
 '''
 - fecha: 2022-10-08 || Autor: Josué Huamán
-- sacado de esta pagina: https://www.tensorflow.org/tutorials/images/transfer_learning
 - codigo separado por los bloques del codigo original para seguir un orden. 
 - para el entrenamiento ver la esta documentacion https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit
   ya que es una forma especial de pasar datos a una red para el entrenamiento.
+- ya se sabe que modelo usar, que pasos tener, como lograr el mejor rendimiento. Lo unico que falta es hacer el procesamiento puro. 
+  Para eso es este codigo (parafrasear nuevamente para que se entienda mejor)
 
 math: bath mini, bath, and stocastic
 https://towardsdatascience.com/the-math-behind-gradient-descent-and-backpropagation-code-example-in-java-using-deeplearning4j-f7340f137ca5
@@ -11,10 +12,10 @@ https://towardsdatascience.com/the-math-behind-gradient-descent-and-backpropagat
 diference between bath mini, bath, and stocastic
 https://www.youtube.com/watch?v=IU5fuoYBTAM
 '''
-
+# ########################
+# FIRST STEP: FEATURE EXTRACTION
+# ########################
 # ----------------------- import the libraries that will be used
-import matplotlib.pyplot as plt
-import numpy as np
 import os
 import tensorflow as tf
 
@@ -55,7 +56,7 @@ train_dataset = train_dataset.prefetch(buffer_size=AUTOTUNE)
 validation_dataset = validation_dataset.prefetch(buffer_size=AUTOTUNE)
 test_dataset = test_dataset.prefetch(buffer_size=AUTOTUNE)
 
-# ----------------------- sequential model for data augmentation
+# ----------------------- create sequential model for data augmentation
 data_augmentation = tf.keras.Sequential([
   tf.keras.layers.RandomFlip('horizontal'),
   tf.keras.layers.RandomRotation(0.2),
@@ -65,7 +66,7 @@ data_augmentation = tf.keras.Sequential([
 preprocess_input = tf.keras.applications.mobilenet_v2.preprocess_input
 
 # ----------------------- load mobilenet network
-# Create the base model from the pre-trained model MobileNet V2
+# Create the base model from the pre-trained model MobileNetV2
 IMG_SHAPE = IMG_SIZE + (3,)
 base_model = tf.keras.applications.MobileNetV2(input_shape=IMG_SHAPE,
                                                include_top=False,
@@ -103,6 +104,36 @@ initial_epochs = 10
 history = model.fit(train_dataset,
                     epochs=initial_epochs,
                     validation_data=validation_dataset)
+
+
+# ########################
+# SECOND STEP: FINE TUNNING
+# ########################
+
+# ----------------------- now we are going to train some layers of the mobilnet network
+base_model.trainable = True
+
+# ----------------------- there 154 layers in the model. We are going to train only 54 of them
+# Fine-tune from this layer onwards
+fine_tune_at = 100
+
+# Freeze all the layers before the `fine_tune_at` layer
+for layer in base_model.layers[:fine_tune_at]:
+  layer.trainable = False
+
+# ----------------------- first: compile
+model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+              optimizer = tf.keras.optimizers.RMSprop(learning_rate=base_learning_rate/10),
+              metrics=['accuracy'])
+
+# ----------------------- second: train 
+fine_tune_epochs = 10
+total_epochs =  initial_epochs + fine_tune_epochs
+
+history_fine = model.fit(train_dataset,
+                         epochs=total_epochs,
+                         initial_epoch=history.epoch[-1],
+                         validation_data=validation_dataset)
 
 # ----------------------- third: predict (we are going to predict using batches of data)
 # Retrieve a batch of images from the test set
