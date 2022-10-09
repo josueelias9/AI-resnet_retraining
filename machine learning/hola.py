@@ -1,18 +1,117 @@
-from tensorflow.keras.applications.resnet50 import ResNet50
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.resnet50 import preprocess_input, decode_predictions
+'''
+- fecha: 2022-10-08 || Autor: Josué Huamán
+- sacado de esta pagina: https://www.tensorflow.org/tutorials/images/transfer_learning
+- codigo separado por los bloques del codigo original para seguir un orden. 
+- para el entrenamiento ver la esta documentacion https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit
+  ya que es una forma especial de pasar datos a una red para el entrenamiento.
+
+math: bath mini, bath, and stocastic
+https://towardsdatascience.com/the-math-behind-gradient-descent-and-backpropagation-code-example-in-java-using-deeplearning4j-f7340f137ca5
+
+diference between bath mini, bath, and stocastic
+https://www.youtube.com/watch?v=IU5fuoYBTAM
+'''
+
+# ----------------------- import the libraries that will be used
+import matplotlib.pyplot as plt
 import numpy as np
+import os
+import tensorflow as tf
 
-model = ResNet50(weights='imagenet')
+# ----------------------- load train set
+_URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
+path_to_zip = tf.keras.utils.get_file('cats_and_dogs.zip', origin=_URL, extract=True)
+PATH = os.path.join(os.path.dirname(path_to_zip), 'cats_and_dogs_filtered')
 
-img_path = 'elephant.jpg'
-img = image.load_img(img_path, target_size=(224, 224))
-x = image.img_to_array(img)
-x = np.expand_dims(x, axis=0)
+train_dir = os.path.join(PATH, 'train')
+validation_dir = os.path.join(PATH, 'validation')
+
+BATCH_SIZE = 32
+IMG_SIZE = (160, 160)
+
+train_dataset = tf.keras.utils.image_dataset_from_directory(train_dir,
+                                                            shuffle=True,
+                                                            batch_size=BATCH_SIZE,
+                                                            image_size=IMG_SIZE)
+
+# ----------------------- load validation stet
+validation_dataset = tf.keras.utils.image_dataset_from_directory(validation_dir,
+                                                                 shuffle=True,
+                                                                 batch_size=BATCH_SIZE,
+                                                                 image_size=IMG_SIZE)
+    
+# -----------------------
+class_names = train_dataset.class_names
+
+# ----------------------- split validation into test and validation set
+val_batches = tf.data.experimental.cardinality(validation_dataset)
+test_dataset = validation_dataset.take(val_batches // 5)
+validation_dataset = validation_dataset.skip(val_batches // 5)
+
+# ----------------------- improve time of training using prefetching
+AUTOTUNE = tf.data.AUTOTUNE
+
+train_dataset = train_dataset.prefetch(buffer_size=AUTOTUNE)
+validation_dataset = validation_dataset.prefetch(buffer_size=AUTOTUNE)
+test_dataset = test_dataset.prefetch(buffer_size=AUTOTUNE)
+
+# ----------------------- sequential model for data augmentation
+data_augmentation = tf.keras.Sequential([
+  tf.keras.layers.RandomFlip('horizontal'),
+  tf.keras.layers.RandomRotation(0.2),
+])
+
+# ----------------------- create scale layer
+preprocess_input = tf.keras.applications.mobilenet_v2.preprocess_input
+
+# ----------------------- load mobilenet network
+# Create the base model from the pre-trained model MobileNet V2
+IMG_SHAPE = IMG_SIZE + (3,)
+base_model = tf.keras.applications.MobileNetV2(input_shape=IMG_SHAPE,
+                                               include_top=False,
+                                               weights='imagenet')
+
+# ----------------------- all the weights and biases of the imagenet model will not be modified
+base_model.trainable = False
+
+# ----------------------- create shrink layer
+global_average_layer = tf.keras.layers.GlobalAveragePooling2D()
+
+# ----------------------- create last layer
+prediction_layer = tf.keras.layers.Dense(1)
+
+# ----------------------- now create graph model
+inputs = tf.keras.Input(shape=(160, 160, 3))
+x = data_augmentation(inputs)
 x = preprocess_input(x)
+x = base_model(x, training=False)
+x = global_average_layer(x)
+x = tf.keras.layers.Dropout(0.2)(x) # -- drops 20% of the connections between the global_average_layer and prediction_layer layers.
+outputs = prediction_layer(x)
+model = tf.keras.Model(inputs, outputs)
 
-preds = model.predict(x)
-# decode the results into a list of tuples (class, description, probability)
-# (one such list for each sample in the batch)
-print('Predicted:', decode_predictions(preds, top=3)[0])
-# Predicted: [(u'n02504013', u'Indian_elephant', 0.82658225), (u'n01871265', u'tusker', 0.1122357), (u'n02504458', u'African_elephant', 0.061040461)]
+# ----------------------- first: compile
+base_learning_rate = 0.0001
+model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=base_learning_rate),
+              loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+  
+# ----------------------- set total epochs
+initial_epochs = 10
+
+# ----------------------- second: train 
+history = model.fit(train_dataset,
+                    epochs=initial_epochs,
+                    validation_data=validation_dataset)
+
+# ----------------------- third: predict (we are going to predict using batches of data)
+# Retrieve a batch of images from the test set
+image_batch, label_batch = test_dataset.as_numpy_iterator().next()
+predictions = model.predict_on_batch(image_batch).flatten()
+
+# Apply a sigmoid since our model returns logits
+predictions = tf.nn.sigmoid(predictions)
+predictions = tf.where(predictions < 0.5, 0, 1)
+
+print('Predictions:\n', predictions.numpy())
+print('Labels:\n', label_batch)

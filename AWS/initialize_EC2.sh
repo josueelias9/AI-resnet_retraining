@@ -1,7 +1,3 @@
-# touch mi_bash.sh
-# copiar todo y poner lo siguiente
-# bash mi_bash
-
 #!/bin/bash
 
 # ---------------------------
@@ -11,7 +7,7 @@
 # actualizar sistema
 sudo apt update
 sudo apt upgrade -y
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 
 # install github cli for ubuntu
 # https://github.com/cli/cli/blob/trunk/docs/install_linux.md
@@ -22,9 +18,9 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt update \
 && sudo apt install gh -y
 
-# hay que crear token. Reemplazar por el token creado.
+# hay que crear token. Reemplazar "xxx" por el token creado.
 # https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token
-export GH_TOKEN=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
+export GH_TOKEN=xxx
 
 # crear carpeta de trabajo y bajar repositorio
 mkdir proyecto
@@ -33,16 +29,7 @@ gh repo clone josueelias9/AI-resnet_retraining
 
 # virtual env
 cd AI-resnet_retraining/django_temp
-sudo apt install python3.10-venv
+sudo apt install python3.10-venv -y
 python3 -m venv venv
-pip3 install requirements.txt
-
-# ---------------------------
-# ahora si, ejecutar bash
-# ---------------------------
-
-# iniciar servidor
-cd django_temp
-pip3 install requirements.txt
-cd project
-python3 manage.py runserver 0.0.0.0:8000
+source ./venv/bin/activate
+pip3 install -r requirements.txt
