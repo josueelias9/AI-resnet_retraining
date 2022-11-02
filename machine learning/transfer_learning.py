@@ -126,6 +126,23 @@ model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
               optimizer = tf.keras.optimizers.RMSprop(learning_rate=base_learning_rate/10),
               metrics=['accuracy'])
 
+# ----------------------- create callback to save the best weights
+from tensorflow import keras
+
+callbacks = [
+    keras.callbacks.ModelCheckpoint(
+        # Path where to save the model
+        # The two parameters below mean that we will overwrite
+        # the current checkpoint if and only if
+        # the `val_loss` score has improved.
+        # The saved model name will include the current epoch.
+        filepath="best_weights/mymodel_{epoch}-{val_loss:.4f}",
+        save_best_only=True,  # Only save a model if `val_loss` has improved.
+        monitor="val_loss",
+        verbose=1,
+    )
+]
+
 # ----------------------- second: train 
 fine_tune_epochs = 10
 total_epochs =  initial_epochs + fine_tune_epochs
@@ -133,7 +150,8 @@ total_epochs =  initial_epochs + fine_tune_epochs
 history_fine = model.fit(train_dataset,
                          epochs=total_epochs,
                          initial_epoch=history.epoch[-1],
-                         validation_data=validation_dataset)
+                         validation_data=validation_dataset,
+                         callbacks=callbacks)
 
 # ----------------------- third: predict (we are going to predict using batches of data)
 # Retrieve a batch of images from the test set

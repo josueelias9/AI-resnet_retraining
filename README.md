@@ -18,12 +18,19 @@ Estructura del proyecto:
 - Primero hacer todos los experimentos necesarios en _Google Colab_ ([aqui](https://www.tensorflow.org/tutorials/images/transfer_learning) ya se hizo ello). Cuando ya se tenga claro que modelo usar para dar solucion al problema se pasa al siguiente paso.
 - en el archivo _transfer_learning.py_ solo se a puesto el codigo de computo (nada de ploteo de imagenes o print, cosas que se usan para evaluar el modelo).
 
-Adicionales
-- El algoritmo de machine learning de este proyecto se base en [este](https://www.tensorflow.org/tutorials/images/transfer_learning) ejemplo oficial de tensorflow. Se usara el modelo _Imagenet_.
+### --- `Adicionales`
+- El algoritmo de machine learning de este proyecto se base en ejemplo oficial de tensorflow. Se usara el modelo _Imagenet_.
+
 ![](documentation/imagenet.jpg)
-- [Aqui](https://keras.io/api/applications/) hay informacion sobre otra arquitectura (Resnet50).
-- Diferencia entre [modelos secuenciales](https://www.tensorflow.org/guide/keras/sequential_model) y [modelos no secuenciales](https://www.tensorflow.org/guide/keras/functional).
-- [Link](https://arxiv.org/pdf/1801.04381.pdf) del paper oficial de MobileNetV2.
+### --- `Links oficiales`
+- Ejemplo oficial de transfer learning usando el modelo el algoritmo mobilNet [Link](https://www.tensorflow.org/tutorials/images/transfer_learning)
+- Informacion de otra arquitectura similar (Resnet50) [Link](https://keras.io/api/applications/)
+- Diferencia entre [modelos secuenciales](https://www.tensorflow.org/guide/keras/sequential_model) y [modelos no secuenciales](https://www.tensorflow.org/guide/keras/functional)
+- Paper oficial de MobileNetV2 [Link](https://arxiv.org/pdf/1801.04381.pdf) 
+- How to use save only the best weights? (search for _save_best_only_) [Link](https://www.tensorflow.org/guide/keras/train_and_evaluate#checkpointing_models)
+- How to dynamically label the group of weights that we save? (search for _val_loss:.2f_) [Link](https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/ModelCheckpoint)
+
+
 
 ## -- `Infraestructure as a Service`
 - ir al servicio _EC2_ de _AWS_ y crear un _key pair_ y llamarle _key-pair-name_.
@@ -61,7 +68,6 @@ chmod 400 _path de key_
 ## -- `docker`
 - https://hub.docker.com/_/python
 - https://docs.docker.com/engine/reference/commandline/run/#full-container-capabilities---privileged
-
 ```bash
 cd (ruta de repo)
 
@@ -69,6 +75,5 @@ docker-compose up -d
 
 docker run -t -i --privileged django-image bash
 ```
-
 - ssh -i ~.ssh\id_ed25519.pub josueelias9@ec2-18-218-105-152.us-east-2.compute.amazonaws.com
 - clave aaa
