@@ -36,8 +36,16 @@ Resources:
   WebServerInstance:
     Type: 'AWS::EC2::Instance'
     Properties:
+      Tags:
+        - Key: "Name"
+          Value: "josue-server"
       InstanceType: t2.medium
       ImageId: ami-08c40ec9ead489470
-      KeyName: key-pair-name
+      KeyName: !Ref NewKeyPair
       SecurityGroups:
         - !Ref WebServerSecurityGroup
+
+Parameters:
+  NewKeyPair:
+    Type: String
+    Default: tu-key-pair-name #sin la extension

@@ -1,0 +1,10 @@
+
+version: "3.9"
+
+services:
+  python-app:
+    image: tensorflow/tensorflow:latest-jupyter
+    container_name: tensorflow-container
+    ports:
+      - 8888:8888
+

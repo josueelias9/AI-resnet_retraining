@@ -1,10 +1,15 @@
 # - `Retraining a Model`
-__Resumen del proyecto__: Uso del poder de computo de las maquinas de AWS para poder entrenar una red neuronal.
-
-Comentarios:
-- no hay desarrollo back o front. La idea es entrenarla red en una computadora potente para que nos realice buenas predicciones.
-
+__Resumen del proyecto__: 
+- Uso del poder de computo de las maquinas de AWS para poder entrenar una red neuronal. 
 ![](documentation/image.jpeg)
+- todo el computo se realizara en un contenedor.
+- La red tiene que ser capaz de distinguir:
+  - parte interna de un vehiculo 
+    ![](documentation/interior.png)
+  - parte externa de un vehiculo 
+    ![](documentation/exterior.jpg)
+
+
 
 Estructura del proyecto:
 ```
@@ -15,12 +20,53 @@ Estructura del proyecto:
     |-- README.md
 ```
 ## -- `machine learning part`
-- Primero hacer todos los experimentos necesarios en _Google Colab_ ([aqui](https://www.tensorflow.org/tutorials/images/transfer_learning) ya se hizo ello). Cuando ya se tenga claro que modelo usar para dar solucion al problema se pasa al siguiente paso.
-- en el archivo _transfer_learning.py_ solo se a puesto el codigo de computo (nada de ploteo de imagenes o print, cosas que se usan para evaluar el modelo).
+- Partimos por de [esta](https://www.tensorflow.org/tutorials/images/transfer_learning) plantilla.
+- prepara estructura del folder y zipear.
+```
+|-- carpeta_dataset
+    |-- train
+        |-- class_1
+        |-- class_2
+    |-- validation
+        |-- class_1
+        |-- class_2
+    |-- vectorize.py
+```
+- subir el zip a google colab
+- dentro del proyecto ejecutar los siguientes comandos para poder descargar el zip (los comandos demoran en ejecutarse. Ser pacientes.)
+```bash
+!sudo apt-get install unzip
+!unzip /content/carpeta_dataset.zip
+```
+- modificar asi:
+```python
+# _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
+# path_to_zip = tf.keras.utils.get_file('cats_and_dogs.zip', origin=_URL, extract=True)
+# PATH = os.path.join(os.path.dirname(path_to_zip), 'cats_and_dogs_filtered')
 
+PATH = '/content/carpeta_dataset' # ubicacion donde esta la carpeta descomprimida
+
+train_dir = os.path.join(PATH, 'train')
+validation_dir = os.path.join(PATH, 'validation')
+
+# BATCH_SIZE = 32
+
+BATCH_SIZE = 8 # de 32 lo bajamos a 8 porque tenemos pocos datos
+
+IMG_SIZE = (160, 160)
+...
+```
+- al modificar el batch tambien se tiene que modificar las imagenes:
+```python
+...
+for images, labels in train_dataset.take(1):
+  #for i in range(9):
+  for i in range(8):
+    ax = plt.subplot(3, 3, i + 1)
+    ...
+```
 ### --- `Adicionales`
 - El algoritmo de machine learning de este proyecto se base en ejemplo oficial de tensorflow. Se usara el modelo _Imagenet_.
-
 ![](documentation/imagenet.jpg)
 ### --- `Links oficiales`
 - Ejemplo oficial de transfer learning usando el modelo el algoritmo mobilNet [Link](https://www.tensorflow.org/tutorials/images/transfer_learning)
@@ -30,6 +76,7 @@ Estructura del proyecto:
 - How to use save only the best weights? (search for _save_best_only_) [Link](https://www.tensorflow.org/guide/keras/train_and_evaluate#checkpointing_models)
 - How to dynamically label the group of weights that we save? (search for _val_loss:.2f_) [Link](https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/ModelCheckpoint)
 
+ssasdasdasdas
 
 
 ## -- `Infraestructure as a Service`
@@ -77,3 +124,8 @@ docker run -t -i --privileged django-image bash
 ```
 - ssh -i ~.ssh\id_ed25519.pub josueelias9@ec2-18-218-105-152.us-east-2.compute.amazonaws.com
 - clave aaa
+
+## -- `observacion`
+- primero levantar servidor linux con docker y docker compose
+- levantar imagen y contenedor con todas las dependencias
+- dentro de contenedor instalar git para descargar proyecto

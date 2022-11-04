@@ -1,10 +1,10 @@
 
-version: "3.7"
+version: "3.9"
 
 services:
-  app:
-    image: django-image
+  python-app:
+    image: python-image
     build: .
-    container_name: django-container
+    container_name: python-container
     ports:
       - 8000:8000
