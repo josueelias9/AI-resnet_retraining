@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2022-11-05T08:39:02.819Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="-keTZIiMMStzAGU9B7VK" version="20.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-05T17:18:59.420Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="Wo8Un2fbwgFZY4AteEIK" version="20.5.2" type="github">
   <diagram id="d1UGlg10RTn8FGWX02N2" name="Página-1">
-    <mxGraphModel dx="796" dy="400" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1336" dy="542" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tucPYehaHJomBl3AI-Kj-5" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="80" width="760" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="PIHT4YTbdGvhNMDjKg08-3" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="PIHT4YTbdGvhNMDjKg08-3" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="361" y="153" width="200" height="155" as="geometry" />
         </mxCell>
-        <mxCell id="PIHT4YTbdGvhNMDjKg08-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="PIHT4YTbdGvhNMDjKg08-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="201" y="153" width="200" height="155" as="geometry" />
         </mxCell>
         <mxCell id="tucPYehaHJomBl3AI-Kj-34" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
@@ -200,8 +200,11 @@
             <mxPoint x="1030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PIHT4YTbdGvhNMDjKg08-2" value="50 veces nomas?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="PIHT4YTbdGvhNMDjKg08-2" value="50 veces nomas?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="251" y="296" width="112" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Ht_OsonxDwtbL01Aqiqe-1" value="1 millon&lt;br&gt;de imagenes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-109" y="219" width="87" height="41" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
