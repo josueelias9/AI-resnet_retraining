@@ -1,13 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2022-11-07T09:37:43.008Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="2wi_NZDYMyvwUJ487Svx" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-07T10:31:48.662Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="iQGw4Z4Ea-qgS8OTcqeJ" version="20.5.3" type="github">
   <diagram id="d1UGlg10RTn8FGWX02N2" name="Página-1">
-    <mxGraphModel dx="1544" dy="900" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1537" dy="971" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tucPYehaHJomBl3AI-Kj-5" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
           <mxGeometry x="160" y="80" width="820" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-13" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="170" y="150" width="490" height="160" as="geometry" />
         </mxCell>
         <mxCell id="tucPYehaHJomBl3AI-Kj-34" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
@@ -188,19 +188,19 @@
             <mxPoint x="1030" y="-40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-2" value="&lt;h1&gt;Data cruda&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;1 millon de imagenes&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;marca - modelo - año&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;total de clases:&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;sin unificar: 6274&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;unificado: 837&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-2" value="&lt;h1&gt;Data cruda&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;1 millon de imagenes&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;marca - modelo - año&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;total de clases:&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;sin unificar: 6274&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;unificado: 837&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-80" y="164" width="190" height="144" as="geometry" />
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-8" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="830" y="230" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="800" y="240" as="sourcePoint" />
             <mxPoint x="830" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="tucPYehaHJomBl3AI-Kj-46">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" target="tucPYehaHJomBl3AI-Kj-46" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="840" y="230" as="sourcePoint" />
             <mxPoint x="890" y="180" as="targetPoint" />
@@ -211,19 +211,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-16" value="aun no cuenta los 50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F1CmjYeOLt3YKnNCWYDW-10">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-16" value="aun no cuenta los 100" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="F1CmjYeOLt3YKnNCWYDW-10" vertex="1" connectable="0">
           <mxGeometry x="-0.6261" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="850" y="240" as="sourcePoint" />
             <mxPoint x="880" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-1" value="&lt;h1&gt;Preprocesamiento&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ver si es auto o no&amp;nbsp;(Detectron2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dentro o fuera (MobileNetV2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recortar (Detectron2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;poner solo 100 imagenes por clase (script)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;generar CSV con path de imagenes&amp;nbsp;&lt;/span&gt;(script)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="355" y="-14" width="323" height="136" as="geometry" />
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-1" value="&lt;h1&gt;Preprocesamiento&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;al menos un auto (Detectron2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;el objeto mas grande debe ser auto (Detectron2) PENDIENTE&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dentro o fuera (MobileNetV2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recortar (OpenCV)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;poner solo 100 imagenes por clase (script)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;generar CSV con path de imagenes&amp;nbsp;&lt;/span&gt;(script)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="318" y="-20" width="387" height="136" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
