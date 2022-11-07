@@ -46,14 +46,6 @@ sudo chmod 666 /var/run/docker.sock
 
 
 # ======= 5 =======
-# preparar dataset
-# https://linuxhint.com/extract_rar_files_ubuntu/
-cd /data
-sudo apt install unrar
-unrar x <comprimido.rar>
-
-
-# ======= 6 =======
 # instalar contenedor de tensorflow. Notar que se modifico el segundo comando para habilitar volumenes: "/data:/home"
 # /data: es la carpeta donde estara todas nuestras imagenes. Esta carpeta estara en el servidor
 # /home: es la carpeta del contenedor. Recordar que el contenedor corre dentro del servidor.
