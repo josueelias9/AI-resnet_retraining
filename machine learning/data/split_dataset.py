@@ -3,8 +3,8 @@
 import os
 
 # rutas padres
-como_dan_path = '/home/josue/Escritorio/AI-resnet_retraining/spliting/como_dan'
-como_debe_ser_path = '/home/josue/Escritorio/AI-resnet_retraining/spliting/como_debe_ser'
+como_dan_path = './como_dan'
+como_debe_ser_path = './como_debe_ser'
 
 # tamaño del validation
 porcentaje = 20

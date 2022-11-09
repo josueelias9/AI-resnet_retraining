@@ -51,4 +51,4 @@ sudo chmod 666 /var/run/docker.sock
 # /home: es la carpeta del contenedor. Recordar que el contenedor corre dentro del servidor.
 # https://www.tensorflow.org/install
 docker pull tensorflow/tensorflow:latest  # Download latest stable image
-docker run -it -p 8888:8888 -v /data/josue:/tf/josue -w /tf/josue --gpus all tensorflow/tensorflow:latest-jupyter  # Start Jupyter server 
+docker run -it -p 8888:8888 -v /data/josue_2:/tf/josue -w /tf/josue --gpus all tensorflow/tensorflow:latest-jupyter  # Start Jupyter server 
