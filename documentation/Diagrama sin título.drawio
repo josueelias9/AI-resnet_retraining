@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-13T05:01:43.138Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="YawhUelCMzDE7Tkc7LRL" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-25T02:31:13.250Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="_yULK2I8EmB4SgB2Ed7V" version="20.6.0" type="github">
   <diagram id="d1UGlg10RTn8FGWX02N2" name="Página-1">
-    <mxGraphModel dx="1363" dy="895" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1883" dy="1087" grid="0" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,7 +19,7 @@
         <mxCell id="tucPYehaHJomBl3AI-Kj-34" value="AWS Cloud" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="1" vertex="1">
           <mxGeometry x="520" y="459" width="320" height="121" as="geometry" />
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-1" value="Detectron2&lt;br&gt;al menos un auto" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-1" value="Detectron2&lt;br&gt;at leat one vehicle" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="240" y="201" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9z2Wm28B5pkvkPLOybwL-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
@@ -28,7 +28,7 @@
             <mxPoint x="140" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-4" value="MovileNetV2&lt;br&gt;dentro, fuera o rueda" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-4" value="MovileNetV2&lt;br&gt;filter out inside and tire views&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="560" y="200" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9z2Wm28B5pkvkPLOybwL-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" edge="1">
@@ -37,16 +37,16 @@
             <mxPoint x="1190" y="240.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-11" value="carros clasificados&amp;nbsp;&lt;br&gt;por carpeta&lt;br&gt;&lt;br&gt;clase 1: 100 imag.&lt;br&gt;clase 2: 100&amp;nbsp;imag.&lt;br&gt;...&lt;br&gt;clase 837: 100&amp;nbsp;imag." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="860" y="287" width="129" height="113" as="geometry" />
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-11" value="clasified by model&lt;br&gt;&lt;br&gt;class 1: 100 imag.&lt;br&gt;class 2: 100&amp;nbsp;imag.&lt;br&gt;...&lt;br&gt;class 837: 100&amp;nbsp;imag." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="861" y="295" width="128" height="98" as="geometry" />
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-17" value="OpenCV&lt;br&gt;recortar" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-17" value="OpenCV&lt;br&gt;cut image" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="720" y="201" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-19" value="por definir&lt;br&gt;clasificacion final" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-19" value="final model" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="1200" y="200" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9z2Wm28B5pkvkPLOybwL-20" value="script&lt;br&gt;agregar a carpeta" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+        <mxCell id="9z2Wm28B5pkvkPLOybwL-20" value="script&lt;br&gt;order directories" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="880" y="200" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9z2Wm28B5pkvkPLOybwL-22" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" edge="1">
@@ -61,7 +61,7 @@
             <mxPoint x="680" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tucPYehaHJomBl3AI-Kj-13" value="filtros del mas GENERICO al mas ESPECIFICO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="tucPYehaHJomBl3AI-Kj-12" vertex="1" connectable="0">
+        <mxCell id="tucPYehaHJomBl3AI-Kj-13" value="filters ordered from the most GENERIC to the most SPECIFIC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="tucPYehaHJomBl3AI-Kj-12" vertex="1" connectable="0">
           <mxGeometry x="-0.6998" y="1" relative="1" as="geometry">
             <mxPoint x="110" y="21" as="offset" />
           </mxGeometry>
@@ -75,8 +75,8 @@
         <mxCell id="tucPYehaHJomBl3AI-Kj-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1070" y="260" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="tucPYehaHJomBl3AI-Kj-18" value="837&lt;br&gt;carpetas" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1075" y="220" width="70" height="40" as="geometry" />
+        <mxCell id="tucPYehaHJomBl3AI-Kj-18" value="837&lt;br&gt;directories" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1074" y="220" width="73" height="41" as="geometry" />
         </mxCell>
         <mxCell id="tucPYehaHJomBl3AI-Kj-20" value="backend" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="560" y="480" width="80" height="80" as="geometry" />
@@ -108,11 +108,11 @@
             <mxPoint x="721" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tucPYehaHJomBl3AI-Kj-29" value="PREPARACION DEL MODELO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
-          <mxGeometry x="120" y="-80" width="190" height="30" as="geometry" />
+        <mxCell id="tucPYehaHJomBl3AI-Kj-29" value="PREPARING THE MODEL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="135" y="-78" width="161" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="tucPYehaHJomBl3AI-Kj-30" value="MODELO EN PRODUCCION" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
-          <mxGeometry x="120" y="440" width="180" height="30" as="geometry" />
+        <mxCell id="tucPYehaHJomBl3AI-Kj-30" value="PRODUCTION" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="161" y="442" width="99" height="26" as="geometry" />
         </mxCell>
         <mxCell id="tucPYehaHJomBl3AI-Kj-32" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -193,7 +193,7 @@
             <mxPoint x="1030" y="-80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-2" value="&lt;h1&gt;Data cruda&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;1 millon de imagenes&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;marca - modelo - año&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;total de clases:&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;sin unificar: 6274 (2037?)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;unificado: 837 (284?)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-2" value="&lt;h1&gt;Raw data&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;1 millon images&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;branch - model - year&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;total classes:&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;not unified: 6274 (2037?)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;&quot;&gt;unified: 837 (284?)&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-135" y="161" width="229" height="144" as="geometry" />
         </mxCell>
         <mxCell id="F1CmjYeOLt3YKnNCWYDW-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -216,7 +216,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-16" value="aun no cuenta los 100" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="F1CmjYeOLt3YKnNCWYDW-10" vertex="1" connectable="0">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-16" value="not 200 images yet" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="F1CmjYeOLt3YKnNCWYDW-10" vertex="1" connectable="0">
           <mxGeometry x="-0.6261" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -227,10 +227,10 @@
             <mxPoint x="1040" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="F1CmjYeOLt3YKnNCWYDW-1" value="&lt;h1&gt;Preprocesamiento&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;al menos un auto (Detectron2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;el objeto mas grande debe ser auto (Detectron2) PENDIENTE&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;dentro o fuera (MobileNetV2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;recortar (OpenCV)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;poner solo 100 imagenes por clase (script)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;generar CSV con path de imagenes&amp;nbsp;&lt;/span&gt;(script)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="F1CmjYeOLt3YKnNCWYDW-1" value="&lt;h1&gt;Image Filtering&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;filter 1: At least one vehicle (Detectron2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;filter 2: The bigges object has to be a vehicle (Detectron2)&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;filter 3: Filter out inside and tire images (MobileNetV2)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;filter 4: Cut image (OpenCV)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Script: 200 images per class (script)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;generar CSV con path de imagenes&amp;nbsp;&lt;/span&gt;(script)&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="400" y="-66" width="387" height="136" as="geometry" />
         </mxCell>
-        <mxCell id="5rm0WwpFGam9E5qQwC_w-1" value="Detectron2&lt;br&gt;el objeto mas grande es un auto" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="5rm0WwpFGam9E5qQwC_w-1" value="Detectron2&lt;br&gt;the biggest must be a vehicle" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="400" y="200" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5rm0WwpFGam9E5qQwC_w-2" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -258,11 +258,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5rm0WwpFGam9E5qQwC_w-7" value="&lt;h1&gt;Entrenamiento&lt;/h1&gt;&lt;p&gt;&amp;nbsp;Model por definir.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="5rm0WwpFGam9E5qQwC_w-7" value="&lt;h1&gt;Training&lt;/h1&gt;&lt;p&gt;&amp;nbsp;Resnet50 model.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1131" y="-18" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="yd9wznrIpCR02zROINFP-1" value="ver si agregamos:&lt;br&gt;- filtro de resolucion&lt;br&gt;- filtro de todo parte" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="132" y="16" width="123" height="55" as="geometry" />
+          <mxGeometry x="32" y="-164" width="123" height="55" as="geometry" />
         </mxCell>
         <mxCell id="q755_M4wVSy7qyd6V_dx-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="410" y="691" width="10" height="10" as="geometry" />
@@ -330,13 +330,10 @@
         <mxCell id="q755_M4wVSy7qyd6V_dx-30" value="raiz A: 20&lt;br&gt;raiz B: 20&lt;br&gt;..." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="561" y="720" width="80" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="wnP-CliUnWXqul29y_Q8-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffff88;strokeColor=#36393d;" vertex="1" parent="1">
-          <mxGeometry x="53" y="81" width="28" height="28" as="geometry" />
-        </mxCell>
-        <mxCell id="wnP-CliUnWXqul29y_Q8-2" value="345 img&lt;br&gt;1 iteracion&lt;br&gt;-&amp;gt; /origen/abart_spider_2018&lt;br&gt;-&amp;gt; /desitno/abart_spider&lt;br&gt;&lt;br&gt;500 img&lt;br&gt;2 iteracion&lt;br&gt;-&amp;gt; /origen/abart_spider_2019&lt;br&gt;-&amp;gt; /desitno/abart_spider&lt;br&gt;&lt;br&gt;..." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="wnP-CliUnWXqul29y_Q8-2" value="345 img&lt;br&gt;1 iteracion&lt;br&gt;-&amp;gt; /origen/abart_spider_2018&lt;br&gt;-&amp;gt; /desitno/abart_spider&lt;br&gt;&lt;br&gt;500 img&lt;br&gt;2 iteracion&lt;br&gt;-&amp;gt; /origen/abart_spider_2019&lt;br&gt;-&amp;gt; /desitno/abart_spider&lt;br&gt;&lt;br&gt;..." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="80" y="252" width="172" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="wnP-CliUnWXqul29y_Q8-3" value="sale una&lt;br&gt;carpeta&lt;br&gt;20 img&lt;br&gt;+&lt;br&gt;count = 20" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="wnP-CliUnWXqul29y_Q8-3" value="sale una&lt;br&gt;carpeta&lt;br&gt;20 img&lt;br&gt;+&lt;br&gt;count = 20" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="819" y="160" width="74" height="84" as="geometry" />
         </mxCell>
       </root>
